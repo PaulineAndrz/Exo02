@@ -3,18 +3,26 @@ package fr.dessin;
 public class Point2D {
     private Integer x;
     private Integer y;
-    public static Integer compteur = 0;
+    private static Integer compteur = 0;
 
     public Point2D() {
-        this.x = 0;
-        this.y = 0;
-        this.compteur += 1;
+        // Mauvaise pratique
+        // this.x = 0;
+        // this.y = 0;
+        // Utiliser les setters à la place :
+        this.setX(0);
+        this.setY(0);
+        this.compteur++;
     }
 
     public Point2D(Integer vX, Integer vY) {
-        this.x = vX;
-        this.y = vY;
-        this.compteur += 1;
+        // Mauvaise pratique
+        // this.x = vX;
+        // this.y = vY;
+        // Utiliser les setters à la place :
+        this.setX(vX);
+        this.setY(vY);
+        this.compteur++;
     }
 
     public Integer getX() {
