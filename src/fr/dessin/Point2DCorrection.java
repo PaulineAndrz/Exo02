@@ -1,21 +1,9 @@
 package fr.dessin;
 
-public class Point2D {
+public class Point2DCorrection {
+
     private Integer x;
     private Integer y;
-    public static Integer compteur = 0;
-
-    public Point2D() {
-        this.x = 0;
-        this.y = 0;
-        this.compteur += 1;
-    }
-
-    public Point2D(Integer vX, Integer vY) {
-        this.x = vX;
-        this.y = vY;
-        this.compteur += 1;
-    }
 
     public Integer getX() {
         return x;
@@ -48,11 +36,7 @@ public class Point2D {
      * @param dY valeur à ajouter à y
      */
     public void translate(Integer dX, Integer dY) {
-        this.setX(this.getX() + dX);
-        this.setY(this.getY() + dY);
-    }
-
-    public static Integer getCompteur() {
-        return Point2D.compteur;
+       this.setX(this.getX() + dX);
+       this.setY(this.getY() +dY);
     }
 }
