@@ -1,17 +1,18 @@
 package fr.dessin;
 
-import java.util.Objects;
-
-public class Point3D extends Point2D {
+public class Point3DCompo {
     private Integer z;
+    private Point2D point2D;
 
-    public Point3D() {
-        super(0, 0);
+    public Point3DCompo() {
+        this.point2D.setX(0);
+        this.point2D.setY(0);
         this.setZ(0);
     }
 
-    public Point3D(Integer vX, Integer vY, Integer vZ) {
-        super(vX, vY);
+    public Point3DCompo(Integer vX, Integer vY, Integer vZ) {
+        this.point2D.setX(vX);
+        this.point2D.setY(vY);
         this.setZ(vZ);
     }
 
@@ -23,13 +24,11 @@ public class Point3D extends Point2D {
         this.z = z;
     }
 
-
-    @Override
     public void afficher() {
         System.out.println("["
-                .concat(this.getX().toString())
+                .concat(this.point2D.getX().toString())
                 .concat(",")
-                .concat(this.getY().toString())
+                .concat(this.point2D.getY().toString())
                 .concat(",")
                 .concat(this.getZ().toString())
                 .concat("]")
@@ -37,7 +36,9 @@ public class Point3D extends Point2D {
     }
 
     public void translate(Integer dX, Integer dY, Integer dZ) {
-        super.translate(dX, dY);
+        this.point2D.setX(this.point2D.getX() + dX);
+        this.point2D.setY(this.point2D.getY() + dY);
         this.setZ(this.getZ() + dZ);
     }
+
 }

@@ -1,5 +1,7 @@
 package fr.dessin;
 
+import java.util.Objects;
+
 public class Point2D {
     private Integer x;
     private Integer y;

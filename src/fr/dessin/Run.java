@@ -20,5 +20,8 @@ public class Run {
 
         point3DBis.translate(6, 8);
         point3DBis.afficher();
+
+
+
     }
 }
