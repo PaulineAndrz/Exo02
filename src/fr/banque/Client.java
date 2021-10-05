@@ -7,7 +7,7 @@ public class Client {
     private String prenom;
     private Integer age;
     private Integer numero;
-    private Compte[] comptes = new Compte[4];
+    private Compte[] comptes = new Compte[5];
 
     public Client () {}
 
@@ -70,20 +70,22 @@ public class Client {
     }
 
     public void ajouterCompte(Compte compte) {
-        for (int i =0; i < getComptes().length; i++) {
-            if (getComptes()[i] == null ) {
-                getComptes()[i] = compte;
+        for (int i =0; i < this.getComptes().length; i++) {
+            if (this.getComptes()[i] == null ) {
+                this.getComptes()[i] = compte;
                 break;
+            } else {
+                System.out.println("Vous avez le nombre max de compte");
             }
         }
-
     }
 
-    public void voirCompte(Integer numero) {
+    public void getCompte(Integer numero) {
         if (null != this.getComptes()) {
-            for (Compte compte : comptes) {
+            for (Compte compte : this.getComptes()) {
                 if (compte.getNumero().equals(numero)) {
                     System.out.println(compte.toString());
+                    break;
                 } else {
                     System.out.println("not found");
                 }
